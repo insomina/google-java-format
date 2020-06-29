@@ -490,7 +490,7 @@ public class MainTest {
             new PrintWriter(err, true),
             new ByteArrayInputStream(joiner.join(input).getBytes(UTF_8)));
     assertThat(main.format("--assume-filename=Foo.java", "-")).isEqualTo(1);
-    assertThat(err.toString()).contains("Foo.java:1:15: error: class, interface, or enum expected");
+    assertThat(err.toString()).contains("Foo.java:1:15: error: 需要class, interface或enum");
   }
 
   @Test
